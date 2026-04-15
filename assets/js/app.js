@@ -85,12 +85,14 @@ function sendContact(e) {
     const data = {
     firstName: document.getElementById("fname").value,
     lastName: document.getElementById("lname").value,
-    contact: document.getElementById("contact").value,
+    contact: document.getElementById("contactNumber").value,
     email: document.getElementById("email").value,
     message: document.getElementById("message").value,
     captcha: captcha
     };
 
+    console.log("Contact value:", document.getElementById("contactNumber").value);
+console.log("Full data:", data);
   fetch(siteConfig.api.contactUrl, {
     method: "POST",
     body: JSON.stringify(data)
