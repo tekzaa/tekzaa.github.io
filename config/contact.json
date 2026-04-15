@@ -1,0 +1,16 @@
+{
+  "title": "Contact Us",
+  "fields": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "contact": "Contact Number",
+    "email": "Email Address",
+    "message": "Your Message"
+  },
+  "buttonText": "Send Message",
+  "messages": {
+    "success": "Your message has been sent successfully.",
+    "error": "Something went wrong. Please try again.",
+    "captcha": "Please verify captcha"
+  }
+}
