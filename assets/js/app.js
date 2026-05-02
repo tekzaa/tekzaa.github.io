@@ -91,8 +91,18 @@ function sendContact(e) {
     captcha: captcha
     };
 
-    console.log("Contact value:", document.getElementById("contactNumber").value);
-console.log("Full data:", data);
+
+    // 🔥 VALIDATION CHECK
+  const error = validateForm(data);
+  if(error){
+    showMessage("error", error);
+    // 🔥 RESET UI (MAIN FIX)
+    loader.style.display = "none";
+    btn.disabled = false;
+    btn.innerText = contactConfig.buttonText;
+    return;
+  }
+
   fetch(siteConfig.api.contactUrl, {
     method: "POST",
     body: JSON.stringify(data)
@@ -119,17 +129,35 @@ console.log("Full data:", data);
   });
 }
 
-// function showMessage(type, msg){
+function validateForm(data){
 
-//   document.querySelector(".error-message").innerText = "";
-//   document.querySelector(".sent-message").innerText = "";
+  // First Name
+  if(!data.firstName || data.firstName.trim() === ""){
+    return "First name is required";
+  }
 
-//   if(type === "success"){
-//     document.querySelector(".sent-message").innerText = msg;
-//   } else {
-//     document.querySelector(".error-message").innerText = msg;
-//   }
-// }
+  // Last Name
+  if(!data.lastName || data.lastName.trim() === ""){
+    return "Last name is required";
+  }
+
+  // 🔥 Contact validation (ONLY digits, exactly 10)
+  if(!/^[0-9]{10}$/.test(data.contact)){
+    return "Enter valid 10 digit contact number";
+  }
+
+  // Email validation
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)){
+    return "Enter valid email address";
+  }
+
+  // Message
+  if(!data.message || data.message.trim().length < 5){
+    return "Message must be at least 5 characters";
+  }
+
+  return null; // all valid
+}
 
 function showMessage(type, msg){
 
