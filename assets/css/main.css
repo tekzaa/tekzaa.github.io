@@ -1075,7 +1075,7 @@ section,
 }
 
 .clients .swiper-wrapper {
-  height: auto;
+  transition-timing-function: linear !important;
 }
 
 .clients .swiper-slide img {
@@ -2848,4 +2848,115 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+/* Our 5 setp proccess */
+.process {
+  padding: 60px 0;
+}
+
+.process-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.process-card h3 {
+  font-size: 28px;
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+.process-card h5 {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.process-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.process-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Our 5 setp proccess */
+
+/* refer */
+.refer {
+  padding: 60px 0;
+}
+
+.refer-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.refer-card h3 {
+  font-size: 28px;
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+.refer-card h5 {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.refer-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.refer-card:hover {
+  transform: translateY(-5px);
+}
+/* refer */
+/* why  */
+.why-us .icon-box:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+.why-us .icon-box .icon {
+  width: 70px;
+  height: 70px;
+  /* background: rgba(13, 110, 253, 0.1); */
+  background: rgba(25, 135, 84, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-us .icon-box .icon i {
+  font-size: 32px;
+  color: #198754; /* Bootstrap green */
+}
+/* why  */
+
+
+
+.btn-tekzaa {
+  background-color: #198754;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-tekzaa:hover {
+  background-color: #146c43;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
