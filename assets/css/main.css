@@ -1103,7 +1103,7 @@ section,
 .stats .stats-item .purecounter {
   color: var(--heading-color);
   font-size: 40px;
-  display: block;
+  display: inline;
   font-weight: 700;
   line-height: 40px;
 }
@@ -2962,54 +2962,120 @@ section,
 }
 
 
-.process-card{
-  background:#fff;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 5px 25px rgba(0,0,0,.08);
-  text-align:center;
-  position:relative;
-  height:100%;
-  transition:.3s;
+/* ======================================
+   OUR 5 STEP PROCESS
+====================================== */
+
+.process {
+  padding: 80px 0;
 }
 
-.process-card:hover{
-  transform:translateY(-6px);
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-.process-img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
+.process-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: all 0.3s ease;
+  height: 100%;
 }
 
-.step-number{
-  position:absolute;
-  top:12px;
-  left:12px;
-
-  width:50px;
-  height:50px;
-
-  background:#198754;
-  color:white;
-
-  border-radius:50%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:22px;
-  font-weight:700;
+.process-card:hover {
+  transform: translateY(-8px);
 }
 
-.process-card h5{
-  padding:15px 10px 5px;
-  font-weight:700;
+.process-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
-.process-card p{
-  padding:0 15px 20px;
-  font-size:14px;
+.step-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 52px;
+  height: 52px;
+  background: #0d9488;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.process-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.process-content h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #012970;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  min-height: 70px;
+}
+
+.process-content p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Large Laptop */
+@media (max-width: 1400px) {
+  .process-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .process-content h4 {
+    font-size: 20px;
+    min-height: 60px;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1199px) {
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-card img {
+    height: 240px;
+  }
+
+  .process-content h4 {
+    min-height: auto;
+    font-size: 28px;
+  }
+
+  .process-content p {
+    font-size: 15px;
+  }
 }
