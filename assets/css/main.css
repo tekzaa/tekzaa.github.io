@@ -2850,20 +2850,6 @@ section,
   font-size: 14px;
 }
 
-/* Our 5 setp proccess */
-.process {
-  padding: 60px 0;
-}
-
-.process-card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-  transition: 0.3s;
-}
-
 .process-card h3 {
   font-size: 28px;
   color: #0d6efd;
@@ -2918,6 +2904,28 @@ section,
 .refer-card:hover {
   transform: translateY(-5px);
 }
+
+/* Refer & Earn Images */
+
+.refer-img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:20px;
+}
+
+.pricing-item{
+  overflow:hidden;
+}
+
+@media(max-width:767px){
+
+  .refer-img{
+    height:200px;
+  }
+
+}
 /* refer */
 /* why  */
 .why-us .icon-box:hover {
@@ -2966,116 +2974,112 @@ section,
    OUR 5 STEP PROCESS
 ====================================== */
 
-.process {
-  padding: 80px 0;
+.process{
+  padding:80px 0;
 }
 
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(220px, 1fr));
-  gap: 20px;
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
 }
 
-.process-card {
-  background: #fff;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  position: relative;
-  transition: all 0.3s ease;
-  height: 100%;
+.process-card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.3s;
+  height:100%;
+  position:relative;
 }
 
-.process-card:hover {
-  transform: translateY(-8px);
+.process-card:hover{
+  transform:translateY(-6px);
 }
 
-.process-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+.process-card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  object-position:center;
+  display:block;
 }
 
-.step-badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 52px;
-  height: 52px;
-  background: #0d9488;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 24px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 5;
+.step-badge{
+  position:absolute;
+  top:15px;
+  left:15px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#198754;
+  color:#fff;
+  font-size:24px;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:10;
 }
 
-.process-content {
-  padding: 20px;
-  text-align: center;
+.process-content{
+  padding:25px;
+  text-align:center;
 }
 
-.process-content h4 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #012970;
-  margin-bottom: 15px;
-  line-height: 1.3;
-  min-height: 70px;
+.process-content h4{
+  font-size:22px;
+  font-weight:700;
+  color:#012970;
+  margin-bottom:15px;
+  line-height:1.3;
 }
 
-.process-content p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.7;
-  margin: 0;
-}
-
-/* Large Laptop */
-@media (max-width: 1400px) {
-  .process-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
-  .process-content h4 {
-    font-size: 20px;
-    min-height: 60px;
-  }
+.process-content p{
+  font-size:15px;
+  line-height:1.7;
+  color:#555;
+  margin:0;
 }
 
 /* Laptop */
-@media (max-width: 1199px) {
-  .process-grid {
-    grid-template-columns: repeat(3, 1fr);
+@media (max-width:1199px){
+
+  .process-grid{
+    grid-template-columns:repeat(3,1fr);
   }
+
 }
 
 /* Tablet */
-@media (max-width: 991px) {
-  .process-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width:991px){
+
+  .process-grid{
+    grid-template-columns:repeat(2,1fr);
   }
+
 }
 
 /* Mobile */
-@media (max-width: 767px) {
-  .process-grid {
-    grid-template-columns: 1fr;
+@media (max-width:767px){
+
+  .process-grid{
+    grid-template-columns:1fr;
   }
 
-  .process-card img {
-    height: 240px;
+  .process-card img{
+    height:220px;
   }
 
-  .process-content h4 {
-    min-height: auto;
-    font-size: 28px;
+}
+
+@media (min-width: 1200px) {
+
+  #hero .col-lg-5 img {
+    width: 125% !important;
+    max-width: none !important;
+    margin-left: -50px;
   }
 
-  .process-content p {
-    font-size: 15px;
-  }
 }
