@@ -1698,7 +1698,7 @@ section,
 }
 
 .pricing ul li {
-  padding: 10px 0;
+  padding: 05px 0;
   display: flex;
   align-items: center;
 }
@@ -2876,6 +2876,10 @@ section,
    REFER & EARN FIX
 ========================== */
 
+#refer{
+   padding-bottom:40px;
+}
+
 #refer .row{
     align-items:stretch;
 }
@@ -2918,6 +2922,11 @@ section,
 /* Button spacing */
 #refer .btn-tekzaa{
     margin-top:30px;
+}
+
+.text-center.mt-4{
+   margin-top:20px !important;
+   margin-bottom:20px !important;
 }
 
 /* Mobile */
@@ -3096,7 +3105,7 @@ section,
 
 /* T&C */
 .why-tekzaa-banner{
-    padding:60px 0 20px;
+    padding:30px 0 20px;
 }
 
 .why-tekzaa-banner img{
