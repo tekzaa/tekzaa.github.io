@@ -34,8 +34,8 @@
 
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #01433c; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #008374; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-color: #0A1F44; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #6A00FF; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -2891,18 +2891,21 @@ section,
   min-height: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   overflow: hidden;
   border-radius: 16px;
-  padding: 24px 20px;
+  padding: 20px 16px;
 }
 
 #refer .refer-img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  max-width: 260px;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
   display: block;
-  border-radius: 10px;
-  margin-bottom: 16px;
+  margin: 0 auto 16px auto;
+  border-radius: 8px;
 }
 
 #refer .featured {
@@ -2915,6 +2918,7 @@ section,
   font-size: 16px;
   min-height: auto;
   margin-bottom: 0;
+  text-align: center;
 }
 
 #refer .pricing-item ul {
@@ -2930,18 +2934,22 @@ section,
   margin-bottom: 20px !important;
 }
 
+/* Tablet */
 @media (max-width: 991px) {
   #refer .pricing-item {
     min-height: auto;
   }
   #refer .refer-img {
-    height: 160px;
+    max-width: 220px;
+    max-height: 180px;
   }
 }
 
+/* Mobile & iOS */
 @media (max-width: 767px) {
   #refer .refer-img {
-    height: 150px;
+    max-width: 200px;
+    max-height: 160px;
   }
   #refer .pricing-item h3 {
     font-size: 15px;
