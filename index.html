@@ -46,7 +46,7 @@
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
           <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">Info@tekzaatechit.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 (307) 655-6857</span></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><a href="tel:+13076556857">+1 (307) 655-6857</a></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
@@ -72,6 +72,7 @@
             <li><a href="#hero" class="active">Home<br></a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#refer">Refer & Earn</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -723,7 +724,7 @@
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Call Us</h3>
-                  <p>+1 (307) 655-6857</p>
+                  <p><a href="tel:+13076556857">+1 (307) 655-6857</a></p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -776,6 +777,26 @@
         <div id="recaptcha-container"></div>
       </div>
 
+      <!-- Privacy Policy & Terms Links -->
+      <div class="col-md-12">
+        <div class="form-legal-links">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">
+            <i class="bi bi-shield-lock"></i> Privacy Policy
+          </a>
+          <span class="form-legal-divider">|</span>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">
+            <i class="bi bi-file-earmark-text"></i> Terms &amp; Conditions
+          </a>
+        </div>
+      </div>
+
+      <!-- Consent Text -->
+      <div class="col-md-12">
+        <p class="form-consent-text">
+          By submitting this form, you agree to receive emails, calls, or messages from the Tekzaa Tech IT regarding your inquiry.
+        </p>
+      </div>
+
       <!-- Messages -->
       <div class="col-md-12 text-center">
         <div class="loading" style="display:none;">Processing...</div>
@@ -802,7 +823,7 @@
 
     <div class="container footer-top">
       <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
+        <div class="col-lg-4 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename">Tekzaa</span>
           </a>
@@ -815,25 +836,35 @@
           </div>
         </div>
 
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
+        <div class="col-lg-2 col-md-4 col-6 footer-links">
+          <h4>Useful Links</h4>
           <ul>
-            <li><a href="#">Our Process</a></li>
-            <li><a href="#">About Tekzaa</a></li>
-            <li><a href="#">Job Placements</a></li>
-           <li><a href="#">Refer & Earn</a></li>
-            <li><a href="#">Free Consultation</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#refer">Refer &amp; Earn</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms &amp; Conditions</a></li>
           </ul>
         </div>
 
-        <div class="col-lg-2 col-6 footer-links">
+        <div class="col-lg-2 col-md-4 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#process">Our Process</a></li>
+            <li><a href="#about">About Tekzaa</a></li>
+            <li><a href="#services">Job Placements</a></li>
+            <li><a href="#refer">Refer &amp; Earn</a></li>
+            <li><a href="#contact">Free Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 footer-links">
           <h4>Contact Us</h4>
-          <p>30 N Gould St Ste 100</p>
-          <p>Sheridan, WY 82801</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 (307) 655-6857</span></p>
-          <p><strong>Email:</strong> <span>Info@tekzaatechit.com</span></p>
+          <p><i class="bi bi-geo-alt me-2"></i>30 N Gould St Ste 100, Sheridan, WY 82801, United States</p>
+          <p><i class="bi bi-telephone me-2"></i><strong>Phone:</strong> <a href="tel:+13076556857">+1 (307) 655-6857</a></p>
+          <p><i class="bi bi-envelope me-2"></i><strong>Email:</strong> <span>Info@tekzaatechit.com</span></p>
         </div>
 
       </div>
@@ -841,16 +872,192 @@
 
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Tekzaa</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by Tekzaa Team Distributed by Tekzaa IT team
-      </div>
+      <!-- <div class="credits">
+       Designed by Tekzaa Team Distributed by Tekzaa IT team
+      </div> -->
     </div>
 
   </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="privacyModalLabel"><i class="bi bi-shield-lock me-2"></i>Privacy Policy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>At Tekzaa Tech IT, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and protect your information when you visit our website or use our services. By accessing or using our website, you agree to the terms of this Privacy Policy.</p>
+
+          <h6>1. Information We Collect</h6>
+          <p>We may collect the following types of information:</p>
+          <p><strong>A. Personal Information</strong><br>We may collect personal information that you voluntarily provide, including but not limited to:</p>
+          <ul>
+            <li>Full name</li>
+            <li>Email address</li>
+            <li>Phone number</li>
+            <li>Resume or employment information</li>
+            <li>Company details</li>
+            <li>Any information submitted through forms, applications, or communications</li>
+          </ul>
+          <p><strong>B. Automatically Collected Information</strong><br>When you visit our website, we may automatically collect certain information, such as:</p>
+          <ul>
+            <li>IP address</li>
+            <li>Browser type</li>
+            <li>Device information</li>
+            <li>Operating system</li>
+            <li>Website usage data</li>
+            <li>Cookies and tracking information</li>
+          </ul>
+
+          <h6>2. How We Use Your Information</h6>
+          <p>We use the information we collect to:</p>
+          <ul>
+            <li>Provide staffing and recruitment services</li>
+            <li>Schedule interviews and communicate job opportunities</li>
+            <li>Improve our website and services</li>
+            <li>Send important updates and notifications</li>
+            <li>Analyze website usage and user experience</li>
+            <li>Maintain security and prevent fraud</li>
+          </ul>
+          <p>We do not sell your personal information to third parties.</p>
+
+          <h6>3. SMS Consent &amp; Communications</h6>
+          <p>If you provide your mobile phone number and consent to receive SMS communications from Tekzaa Tech IT, you may receive text messages related to:</p>
+          <ul>
+            <li>Job opportunities</li>
+            <li>Interview scheduling</li>
+            <li>Candidate updates</li>
+            <li>Account notifications</li>
+            <li>Service-related communications</li>
+          </ul>
+          <p>Message frequency may vary. Message and data rates may apply.<br>
+          You can opt out of SMS communications at any time by replying <strong>STOP</strong> to any message. For assistance, reply <strong>HELP</strong> or contact us directly.<br>
+          SMS consent is not a condition of purchase or employment.<br>
+          <strong>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</strong> All categories above exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
+
+          <h6>4. Cookies &amp; Tracking Technologies</h6>
+          <p>Our website may use cookies and similar technologies to:</p>
+          <ul>
+            <li>Improve website performance</li>
+            <li>Remember user preferences</li>
+            <li>Analyze website traffic and usage</li>
+            <li>Enhance user experience</li>
+          </ul>
+
+          <h6>5. Third-Party Services</h6>
+          <p>We may use trusted third-party service providers, such as hosting providers, analytics services, CRM systems, and communication platforms, to help operate our business and website. These providers may access information only as necessary to perform services on our behalf and are not permitted to use or disclose your information for other purposes.</p>
+
+          <h6>6. Data Protection &amp; Security</h6>
+          <p>We implement reasonable administrative, technical, and physical safeguards to protect your information from unauthorized access, misuse, loss, or disclosure. While we strive to protect your data, no internet transmission or electronic storage method is completely secure.</p>
+
+          <h6>7. Your Rights</h6>
+          <p>Depending on applicable laws, you may have the right to:</p>
+          <ul>
+            <li>Access your personal information</li>
+            <li>Request corrections to inaccurate information</li>
+            <li>Request deletion of your information</li>
+            <li>Opt out of marketing communications</li>
+            <li>Withdraw consent where applicable</li>
+          </ul>
+          <p>To exercise your rights, please contact us using the information below.</p>
+
+          <h6>8. Data Retention</h6>
+          <p>We retain personal information only for as long as necessary to fulfill business, legal, and operational purposes.</p>
+
+          <h6>9. Children's Privacy</h6>
+          <p>Our services are not directed toward individuals under the age of 13. We do not knowingly collect personal information from children.</p>
+
+          <h6>10. Changes to This Privacy Policy</h6>
+          <p>We may update this Privacy Policy from time to time. Any updates will be posted on this page with a revised "Last Updated" date.</p>
+
+          <h6>11. Contact Us</h6>
+          <p>If you have any questions about this Privacy Policy or your personal information, please contact us:<br>
+          <strong>Tekzaa Tech IT</strong><br>
+          Email: <a href="mailto:Info@tekzaatechit.com">Info@tekzaatechit.com</a></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Privacy Policy Modal -->
+
+  <!-- Terms & Conditions Modal -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="termsModalLabel"><i class="bi bi-file-earmark-text me-2"></i>Terms &amp; Conditions</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Last Updated: May 15, 2026</strong></p>
+          <p>Welcome to Tekzaa Tech IT. By accessing or using our website and services, you agree to comply with and be bound by the following Terms and Conditions. Please read them carefully before using our website.</p>
+
+          <h6>1. Use of Services</h6>
+          <p>Tekzaa Tech IT provides staffing, recruitment, and related employment support services. By using our website, you agree to use our services only for lawful purposes and in accordance with these Terms and Conditions.</p>
+          <p>You agree not to:</p>
+          <ul>
+            <li>Use the website for fraudulent or unlawful activities</li>
+            <li>Attempt to gain unauthorized access to systems or data</li>
+            <li>Interfere with the website's operation or security</li>
+            <li>Submit false or misleading information</li>
+          </ul>
+
+          <h6>2. Text Message Communications</h6>
+          <p>By providing your phone number and opting in through our website forms, you consent to receive SMS messages from Tekzaa Tech IT regarding:</p>
+          <ul>
+            <li>Job opportunities</li>
+            <li>Interview scheduling</li>
+            <li>Candidate updates</li>
+            <li>Account notifications</li>
+            <li>Service-related communications</li>
+          </ul>
+          <p>Message frequency may vary.<br>
+          Message and data rates may apply.<br>
+          Mobile carriers are not liable for delayed or undelivered messages.</p>
+
+          <h6>3. SMS Opt-Out</h6>
+          <p>You may opt out of SMS communications at any time by replying <strong>STOP</strong> to any text message you receive from us.<br>
+          For assistance, reply <strong>HELP</strong> or contact us directly at:<br>
+          Email: <a href="mailto:Info@tekzaatechit.com">Info@tekzaatechit.com</a></p>
+          <p>Opting out will stop messages from the specific number used to contact you; however, you may continue receiving service-related communications from other numbers managed by Tekzaa Tech IT unless separately opted out.</p>
+
+          <h6>4. Data Privacy</h6>
+          <p>Your privacy is important to us.<br>
+          <strong>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</strong> All categories above exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.<br>
+          For additional details regarding how we collect, use, and protect your information, please review our Privacy Policy.</p>
+
+          <h6>5. Intellectual Property</h6>
+          <p>All content on this website, including text, graphics, logos, images, and website design, is the property of Tekzaa Tech IT unless otherwise stated and may not be copied, reproduced, or distributed without written permission.</p>
+
+          <h6>6. Third-Party Links</h6>
+          <p>Our website may contain links to third-party websites for convenience and informational purposes. Tekzaa Tech IT is not responsible for the content, policies, or practices of third-party websites.</p>
+
+          <h6>7. Disclaimer of Warranties</h6>
+          <p>Our website and services are provided "as is" and "as available" without warranties of any kind, either express or implied. We do not guarantee uninterrupted or error-free operation of the website or services.</p>
+
+          <h6>8. Limitation of Liability</h6>
+          <p>Tekzaa Tech IT shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the website or services.</p>
+
+          <h6>9. Changes to Terms</h6>
+          <p>We may update these Terms and Conditions at any time without prior notice. Updated versions will be posted on this page with the revised effective date.</p>
+
+          <h6>10. Contact Information</h6>
+          <p>If you have any questions regarding these Terms and Conditions, please contact us:<br>
+          <strong>Tekzaa Tech IT</strong><br>
+          Email: <a href="mailto:Info@tekzaatechit.com">Info@tekzaatechit.com</a></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Terms & Conditions Modal -->
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
