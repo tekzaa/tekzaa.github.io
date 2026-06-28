@@ -1,10 +1,10 @@
 {
   "companyName": "tekzza",
   "api": {
-    "contactUrl": "https://script.google.com/macros/s/AKfycbxWiF57S-4_z9l1-lKiFIqNJ4P7Jx26YekMUzCRTLCBwn2jxpvtQOu4XXr__hDqewH0_g/exec"    
+    "contactUrl": "https://script.google.com/macros/s/AKfycbzORSfbkQQ5c_VWdiSqYkXq2POTgNxZ_rDqt6zzYqmEldEgjOo7dEZspubdbdHhKFLzMA/exec"
   },
   "recaptcha": {
-    "siteKey": "6LcrlLgsAAAAAH-EofGOTunSF5Tcvjh-UPRiPXXT"
+    "siteKey": "6Le8AjotAAAAACxNtzo2QaWrwVEdwpx3BFpqW5C-"
   }
 }
 
