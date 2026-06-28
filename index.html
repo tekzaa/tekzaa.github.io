@@ -64,7 +64,7 @@
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <img src="assets/img/logo.png" alt="">
           <h1 class="sitename">Tekzaa</h1>
-          <span>.</span>
+          <span></span>
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -761,7 +761,22 @@
       </div>
 
       <div class="col-md-12">
-        <input type="text" class="form-control" id="contactNumber" placeholder="Contact Number" required>
+        <div class="input-group contact-phone-group">
+          <select class="form-select phone-country-code" id="countryCode">
+            <option value="+1">🇺🇸 +1</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+91">🇮🇳 +91</option>
+            <option value="+61">🇦🇺 +61</option>
+            <option value="+971">🇦🇪 +971</option>
+            <option value="+1-CA">🇨🇦 +1</option>
+            <option value="+64">🇳🇿 +64</option>
+            <option value="+65">🇸🇬 +65</option>
+            <option value="+60">🇲🇾 +60</option>
+            <option value="+49">🇩🇪 +49</option>
+          </select>
+          <input type="tel" class="form-control" id="contactNumber" placeholder="Contact Number" required>
+        </div>
+        <small class="phone-hint">Enter digits only, no spaces or dashes</small>
       </div>
 
       <div class="col-md-12">

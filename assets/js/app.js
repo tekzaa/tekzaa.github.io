@@ -85,7 +85,7 @@ function sendContact(e) {
     const data = {
     firstName: document.getElementById("fname").value,
     lastName: document.getElementById("lname").value,
-    contact: document.getElementById("contactNumber").value,
+    contact: document.getElementById("countryCode").value.replace("-CA", "") + document.getElementById("contactNumber").value.trim(),
     email: document.getElementById("email").value,
     message: document.getElementById("message").value,
     captcha: captcha
@@ -141,9 +141,15 @@ function validateForm(data){
     return "Last name is required";
   }
 
-  // 🔥 Contact validation (ONLY digits, exactly 10)
-  if(!/^[0-9]{10}$/.test(data.contact)){
-    return "Enter valid 10 digit contact number";
+  // Contact number validation with country code
+  const rawPhone = document.getElementById("contactNumber").value.trim();
+  const countryCode = document.getElementById("countryCode").value.replace("-CA", "");
+
+  if (!rawPhone) {
+    return "Contact number is required";
+  }
+  if (!/^[0-9]{6,15}$/.test(rawPhone)) {
+    return "Enter a valid contact number (digits only, 6-15 digits)";
   }
 
   // Email validation
